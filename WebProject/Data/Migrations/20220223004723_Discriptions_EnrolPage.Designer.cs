@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProject.Data;
 
 namespace WebProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220223004723_Discriptions_EnrolPage")]
+    partial class Discriptions_EnrolPage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -303,6 +305,9 @@ namespace WebProject.Data.Migrations
                     b.Property<int?>("Course_Id")
                         .HasColumnType("int");
 
+                    b.Property<string>("Course_Location")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Course_Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -314,9 +319,6 @@ namespace WebProject.Data.Migrations
 
                     b.Property<int?>("Student_Id")
                         .HasColumnType("int");
-
-                    b.Property<string>("class_Location")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EnrolName_Id");
 

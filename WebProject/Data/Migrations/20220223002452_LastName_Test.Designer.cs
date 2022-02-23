@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProject.Data;
 
 namespace WebProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220223002452_LastName_Test")]
+    partial class LastName_Test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -281,6 +283,9 @@ namespace WebProject.Data.Migrations
                     b.Property<string>("First_Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Last_Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("Student_Id")
                         .HasColumnType("int");
 
@@ -291,40 +296,6 @@ namespace WebProject.Data.Migrations
                     b.HasIndex("Student_Id");
 
                     b.ToTable("EnrolName");
-                });
-
-            modelBuilder.Entity("WebProject.Models.Etwo", b =>
-                {
-                    b.Property<int>("EnrolName_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("Course_Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Course_Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("First_Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Last_Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("Student_Id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("class_Location")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EnrolName_Id");
-
-                    b.HasIndex("Course_Id");
-
-                    b.HasIndex("Student_Id");
-
-                    b.ToTable("Etwo");
                 });
 
             modelBuilder.Entity("WebProject.Models.Student", b =>
@@ -422,21 +393,6 @@ namespace WebProject.Data.Migrations
                 });
 
             modelBuilder.Entity("WebProject.Models.EnrolName", b =>
-                {
-                    b.HasOne("WebProject.Models.Courses", "Courses")
-                        .WithMany()
-                        .HasForeignKey("Course_Id");
-
-                    b.HasOne("WebProject.Models.Student", "Students")
-                        .WithMany()
-                        .HasForeignKey("Student_Id");
-
-                    b.Navigation("Courses");
-
-                    b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("WebProject.Models.Etwo", b =>
                 {
                     b.HasOne("WebProject.Models.Courses", "Courses")
                         .WithMany()

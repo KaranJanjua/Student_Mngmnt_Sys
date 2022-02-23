@@ -17,6 +17,7 @@ namespace WebProject.Data
         public DbSet<WebProject.Models.Courses> Courses { get; set; }
         public DbSet<WebProject.Models.Enrol> Enrol { get; set; }
         public DbSet<WebProject.Models.EnrolName> EnrolName { get; set; }
+        public DbSet<WebProject.Models.Etwo> Etwo { get; set; }
         
     }
 }

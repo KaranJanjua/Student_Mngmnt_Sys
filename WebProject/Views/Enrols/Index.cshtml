@@ -13,10 +13,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Students)
+                @Html.DisplayNameFor(model => model.Students.First_Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Courses)
+                @Html.DisplayNameFor(model => model.Students.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Courses.Course_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Courses.Tutor_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Courses.class_Location)
             </th>
             <th></th>
         </tr>
@@ -25,10 +37,23 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Students.Student_Id)
+                @Html.DisplayFor(modelItem => item.Students.First_Name)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Students.Last_Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Courses.Course_Id)
+                @Html.DisplayFor(modelItem => item.Students.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Courses.Course_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Courses.Tutor_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Courses.class_Location)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Enrol_Id">Edit</a> |

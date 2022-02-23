@@ -177,3 +177,8 @@ C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\En
 C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\EnrolNames\Details.cshtml.g.cs
 C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\EnrolNames\Edit.cshtml.g.cs
 C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\EnrolNames\Index.cshtml.g.cs
+C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\Etwoes\Create.cshtml.g.cs
+C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\Etwoes\Delete.cshtml.g.cs
+C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\Etwoes\Details.cshtml.g.cs
+C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\Etwoes\Edit.cshtml.g.cs
+C:\Users\4572\source\repos\WebProject\WebProject\obj\Debug\net5.0\Razor\Views\Etwoes\Index.cshtml.g.cs

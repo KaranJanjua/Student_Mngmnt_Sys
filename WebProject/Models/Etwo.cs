@@ -7,23 +7,34 @@ using System.Threading.Tasks;
 
 namespace WebProject.Models
 {
-    public class EnrolName
+    public class Etwo
     {
 
         [Key]
         public int EnrolName_Id { get; set; }
 
-        [Display(Name = "Student")]
+
+
+        [Display(Name = "First Name")]
         public string First_Name { get; set; }
 
-        [ForeignKey("Student_Id")]
-        public virtual Student Students { get; set; }
+        [Display(Name = "Last Name")]
+        public string Last_Name { get; set; }
+
 
         [Display(Name = "Course")]
         public string Course_Name { get; set; }
 
+        [Display(Name = "Class Location")]
+        public string class_Location { get; set; }
+
+
+
+        [ForeignKey("Student_Id")]
+        public Student Student { get; set; }
+
         [ForeignKey("Course_Id")]
-        public virtual Courses Courses { get; set; }
+        public Courses Course { get; set; }
 
 
     }

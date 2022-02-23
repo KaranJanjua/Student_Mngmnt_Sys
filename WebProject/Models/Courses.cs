@@ -10,9 +10,9 @@ namespace WebProject.Models
     {
         [Key]
         public int Course_Id { get; set; }
-        public String Course_Name { get; set; }
-        public String Tutor_Name { get; set; }
-        public String class_Location { get; set; }
+        public string Course_Name { get; set; }
+        public string Tutor_Name { get; set; }
+        public string class_Location { get; set; }
         public DateTime Start_Date { get; set; }
     }
 }
